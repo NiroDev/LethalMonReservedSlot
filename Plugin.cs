@@ -53,13 +53,11 @@ namespace LethalMonReservedSlot
 
         void CreateReservedItemSlots()
         {
-            mls.LogInfo("CreateReservedItemSlots");
-
 #if DEBUG
             LethalMonReservedSlot.Config.Instance.UnlockPrice.Value = 0;
 #endif
 
-            pokeballSlotData = ReservedItemSlotData.CreateReservedItemSlotData("Pokeball slot", LethalMonReservedSlot.Config.Instance.SlotPriority.Value, LethalMonReservedSlot.Config.Instance.UnlockPrice.Value);
+            pokeballSlotData = ReservedItemSlotData.CreateReservedItemSlotData("PokeballSlot", LethalMonReservedSlot.Config.Instance.SlotPriority.Value, LethalMonReservedSlot.Config.Instance.UnlockPrice.Value);
 
             if (LethalMonReservedSlot.Config.Instance.UnlockPrice.Value == 0)
                 UnlockItemSlot();
@@ -70,7 +68,7 @@ namespace LethalMonReservedSlot
             masterballData = pokeballSlotData.AddItemToReservedItemSlot(new ReservedItemData("Master Ball", LethalMonReservedSlot.Config.Instance.AttachTo.Value, BallPositionOffset, BallRotationOffset));
         }
 
-        /*internal static void AttachToChanged()
+        internal static void AttachToChanged()
         {
             if (pokeballSlotData == null) return;
 
@@ -78,7 +76,7 @@ namespace LethalMonReservedSlot
             greatballData.holsteredParentBone = LethalMonReservedSlot.Config.Instance.AttachTo.Value;
             ultraballData.holsteredParentBone = LethalMonReservedSlot.Config.Instance.AttachTo.Value;
             masterballData.holsteredParentBone = LethalMonReservedSlot.Config.Instance.AttachTo.Value;
-        }*/
+        }
 
         internal static void SlotPriorityChanged()
         {

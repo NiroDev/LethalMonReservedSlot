@@ -29,7 +29,7 @@ namespace LethalMonReservedSlot
 
             UnlockPrice.SettingChanged += (obj, args) => { Plugin.UnlockPriceChanged(); };
             SlotPriority.SettingChanged += (obj, args) => { Plugin.SlotPriorityChanged(); };
-            //AttachTo.SettingChanged += (obj, args) => { Plugin.AttachToChanged(); };
+            AttachTo.SettingChanged += (obj, args) => { Plugin.AttachToChanged(); };
         }
     }
 }
