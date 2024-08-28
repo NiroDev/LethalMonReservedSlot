@@ -1,0 +1,11 @@
+{
+    "name": "LethalMonReservedSlot",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/NiroDev/LethalMonReservedSlot",
+    "description": "Reserved item slot addon for LethalMon",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100",
+		"Feiryn-LethalMon-0.5.0",
+		"FlipMods-ReservedItemSlotCore-2.0.35"
+    ]
+}
